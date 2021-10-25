@@ -1,0 +1,13 @@
+<DCPlusPlus>
+  <Settings>
+    <DownloadDirectory type="string">/downloads/</DownloadDirectory>
+    <AutoDetectIncomingConnection type="int">0</AutoDetectIncomingConnection>
+    <InPort type="int">32145</InPort>
+    <UDPPort type="int">32145</UDPPort>
+    <TLSPort type="int">43125</TLSPort>
+  </Settings>
+  <Share Token="0" Name="Default">
+    <Directory Virtual="Share">/shared/</Directory>
+    <NoShare/>
+  </Share>
+</DCPlusPlus>
