@@ -1,4 +1,4 @@
-FROM padhihomelab/alpine-base:3.14.2_0.19.0_0.2 as base
+FROM padhihomelab/alpine-base:3.15.0_0.19.0_0.2 as base
 ARG TARGETARCH
 
 FROM base AS base-amd64
@@ -48,4 +48,4 @@ CMD [ "airdcpp" ]
 
 
 HEALTHCHECK --start-period=5s --interval=15s --timeout=5s --retries=3 \
-        CMD ["wget", "-qSO", "/dev/null", "--header", "Accept: text/html", "http://localhost:5080"]
+        CMD ["wget", "-qSO", "/dev/null", "--header", "Accept: text/html", "http://localhost:5600"]
