@@ -1,4 +1,4 @@
-FROM padhihomelab/alpine-base:3.15.0_0.19.0_0.2 as base
+FROM padhihomelab/alpine-base:3.17.0_0.19.0_0.2 as base
 ARG TARGETARCH
 
 FROM base AS base-amd64
@@ -16,9 +16,10 @@ ENV ARCH_ALIAS=armhf
 FROM base-${TARGETARCH}${TARGETVARIANT}
 
 
-ARG AIRDCPP_VERSION=2.11.2
+ARG AIRDCPP_VERSION=2.11.3
+ARG WEBUI_VERSION=2.11.4
 
-ARG AIRDCPP_PKG_URL=https://web-builds.airdcpp.net/stable/airdcpp_${AIRDCPP_VERSION}_webui-${AIRDCPP_VERSION}_${ARCH_ALIAS}_portable.tar.gz
+ARG AIRDCPP_PKG_URL=https://web-builds.airdcpp.net/stable/airdcpp_${AIRDCPP_VERSION}_webui-${WEBUI_VERSION}_${ARCH_ALIAS}_portable.tar.gz
 ADD ${AIRDCPP_PKG_URL} /tmp/airdcpp.tar.gz
 
 
